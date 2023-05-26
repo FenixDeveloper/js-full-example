@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Webpack App</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="profile">
+                <h1 class="profile__name">Gallery example profile</h1>
+                <button class="icon-button profile__edit icon-pen-solid" type="button"></button>
+            </div>
+            <button class="icon-button header__add-card icon-plus-solid" type="button"></button>
+        </header>
+
+        <main class="gallery">
+        </main>
+
+        <div class="modal modal_overlay" id="add-card">
+            <div class="modal__container">
+                <form name="add-card" class="form">
+                    <h2>Add card</h2>
+                    <label class="form__field">
+                        <span class="form__label">Title</span>
+                        <input class="form__input" type="text" name="title" required minlength="2" maxlength="20" />
+                        <span class="form__help"></span>
+                    </label>
+                    <label class="form__field">
+                        <span class="form__label">URL</span>
+                        <input class="form__input" type="url" name="image" required minlength="10" maxlength="50" />
+                        <span class="form__help"></span>
+                    </label>
+                    <div class="form__field form__field_row">
+                        <button type="submit">ADD</button>
+                    </div>
+                </form>
+                <button type="button" class="icon-button modal__close icon-xmark-solid"></button>
+            </div>
+        </div>
+
+        <template id="card-template">
+            <article class="card">
+                <img class="card__image" src="https://placehold.co/250?text=1" alt="1" />
+                <h2 class="card__title">Card title</h2>
+                <button class="icon-button card__like-btn icon-heart-regular" type="button">12</button>
+                <button class="icon-button card__delete-btn icon-trash-can-solid"></button>
+            </article>
+        </template>
+    </body>
+</html>
